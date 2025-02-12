@@ -119,15 +119,11 @@
     box-sizing: border-box;
   }
 
-  /* 整体容器：使用固定定位，始终铺满可视区域 */
+  /* 整体容器：使用相对定位，确保在父容器中自适应大小 */
   .chatterMain {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 600px; /* 可选：限定最大宽度 */
+    position: relative; /* 改为 relative 定位 */
+    width: 100%; /* 确保宽度为 100% */
+    height: 100%; /* 确保高度为 100% */
     display: flex;
     flex-direction: column;
     border: 1px solid #ccc;

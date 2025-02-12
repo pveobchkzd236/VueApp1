@@ -8,7 +8,7 @@
       <ChatterMain />
     </div>
     <div class="right-pane">
-      <!-- 右半边内容 -->111
+      222
     </div>
   </div>
 </template>
@@ -23,21 +23,13 @@
   .container {
     display: flex;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     gap: 0; /* 可选，添加间隙控制 */
   }
 
   .left-pane, .right-pane {
-    flex: 1;
+    flex: 1; /* 确保两个 div 各占 50% 宽度 */
     overflow: auto;
   }
 
-  /* 可选：给容器设置背景颜色，便于检查布局 */
-  .left-pane {
-    background-color: lightblue;
-  }
-
-  .right-pane {
-    background-color: lightgreen;
-  }
 </style>
