@@ -3,40 +3,41 @@
 </script>
 
 <template>
-  <header>
-
-  </header>
-
-  <main>
-    <ChatterMain />
-  </main>
+  <div class="container">
+    <div class="left-pane">
+      <ChatterMain />
+    </div>
+    <div class="right-pane">
+      <!-- 右半边内容 -->111
+    </div>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
+  .container {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    height: 100vh;
+    width: 100vw;
+    gap: 0; /* 可选，添加间隙控制 */
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .left-pane, .right-pane {
+    flex: 1;
+    overflow: auto;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  /* 可选：给容器设置背景颜色，便于检查布局 */
+  .left-pane {
+    background-color: lightblue;
   }
-}
+
+  .right-pane {
+    background-color: lightgreen;
+  }
 </style>
