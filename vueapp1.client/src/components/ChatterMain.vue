@@ -150,7 +150,7 @@
   }
 
   /* AI 回复中的 think 部分样式 */
-  /deep/ .ai-think think {
+  ::v-deep .ai-think think {
     color: gray;
     display: block;
     margin-bottom: 0.5em;
